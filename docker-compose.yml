@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  mark-butler-solirius:
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    image: hmctspublic.azurecr.io/labs/mark-butler-solirius
+    ports:
+      - $SERVER_PORT:$SERVER_PORT
